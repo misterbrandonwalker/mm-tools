@@ -1,0 +1,48 @@
+specVersion: "0.1.0"
+name: extract_ligand_protein
+version: 0.1.0
+container: extract-ligand-protein-plugin
+entrypoint:
+title: extract_ligand_protein
+description: A tool that employs OpenMM to extract ligands and protein from a PDB file
+author: Data Scientist
+contact: data.scientist@labshare.org
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: input_pdb_path
+    required: true
+    description: Input pdb file path, Type string, File type input, Accepted formats pdb, Example file https://github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/data/utils/cat_protein.pdb
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: output_pdb_path
+    required: true
+    description: Output pdb file path, Type string, File type output, Accepted formats pdb, Example file https://github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/reference/utils/ref_cat_pdb.pdb
+    type: string
+    defaultValue: system.pdb
+    format:
+      uri: edam:format_1476
+  - name: output_pdb_ligand_path
+    required: true
+    description: Output pdb ligand file path, Type string, File type output, Accepted formats sdf
+    type: string
+    defaultValue: ligand_system.pdb
+    format:
+      uri: edam:format_1476
+outputs:
+ui:
+  - key: inputs.input_pdb_path
+    title: "input_pdb_path: "
+    description: "Input pdb file path, Type: string, File type: input, Accepted formats: pdb, Example file: https://github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/data/utils/cat_protein.pdb"
+    type: File
+  - key: inputs.output_pdb_path
+    title: "output_pdb_path: "
+    description: "Output pdb file path, Type: string, File type: output, Accepted formats: pdb, Example file: https://github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/reference/utils/ref_cat_pdb.pdb"
+    type: string
+  - key: inputs.output_pdb_ligand_path
+    title: "output_pdb_ligand_path: "
+    description: "Output pdb ligand file path, Type: string, File type: output, Accepted formats: sdf"
+    type: string
