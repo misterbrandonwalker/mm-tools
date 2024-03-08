@@ -6,7 +6,10 @@ valence.
 """
 # https://depth-first.com/articles/2020/02/10/a-comprehensive-treatment-of-aromaticity-in-the-smiles-language/
 import logging
-from os import environ
+import os
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError
+from concurrent.futures import as_completed
 from pathlib import Path
 
 import rdkit
@@ -17,7 +20,7 @@ from rdkit.Chem import AllChem
 app = typer.Typer()
 
 # Set up logging parameters
-POLUS_LOG = getattr(logging, environ.get("POLUS_LOG", "WARNING"))
+POLUS_LOG = getattr(logging, os.environ.get("POLUS_LOG", "WARNING"))
 logger = logging.getLogger("polus.mm.utils.sanitize_ligand")
 logger.setLevel(POLUS_LOG)
 
@@ -137,7 +140,15 @@ def attempt_fix_ligand(
     valid_lig = True
     try:
         Chem.SanitizeMol(molecule)
-        generate_conformer(molecule)
+        with ThreadPoolExecutor() as executor:
+            futures = [executor.submit(generate_conformer, molecule)]
+            try:
+                for future in as_completed(futures, timeout=5):
+                    future.result()
+            except TimeoutError:
+                if os.getenv("ERROR_LOGGING") == "ON":
+                    logger.warning("Timeout")
+                valid_lig = False
     except rdkit.Chem.rdchem.KekulizeException as e:
         valid_lig = False
         logger.warning(f"KekulizeException: {e}")
