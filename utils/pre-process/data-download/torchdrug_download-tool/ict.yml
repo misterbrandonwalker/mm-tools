@@ -1,0 +1,21 @@
+specVersion: 0.1.0
+name: labshare/torchdrug-download
+version: 0.1.0
+container: polusai/torchdrug-tool:0.1.0
+entrypoint: ""
+title: torchdrug_download
+description: Access datasets and models from TorchDrug
+author: Brandon Walker (brandon.walker@axleinfo.com)
+repository: https://github.com/labshare/mmtools
+documentation: https://ncats.nih.gov/preclinical/core/informatics
+citation: ""
+inputs:
+- name: dataset
+  required: true
+  description: Input dataset to extract
+  type: string
+outputs:
+- name: outdir
+  required: false
+  description: Output collection.
+  type: collection

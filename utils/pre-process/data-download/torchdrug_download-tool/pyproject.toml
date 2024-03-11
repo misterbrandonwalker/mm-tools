@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "polus-mm-utils-torchdrug_download"
+version = "0.1.0"
+description = "Access datasets and models from TorchDrug"
+authors = ["Data Scientist <brandon.walker@axleinfo.com>"]
+readme = "README.md"
+packages = [{include = "polus", from = "src"}]
+
+[tool.poetry.dependencies]
+python = ">=3.8,<3.11"
+torch = { version = "1.12.1", source="torch"}
+torchaudio = { version = "0.12.1", source="torch"}
+torchvision = { version = "0.13.1", source="torch"}
+torch-cluster = { version = "1.6.0", source="pyg"}
+torch-scatter = { version = "2.0.9", source="pyg"}
+torchdrug = "0.2.1"
+rdkit = "2023.9.5"
+typer = "^0.7.0"
+
+[[tool.poetry.source]]
+name = "torch"
+url = "https://download.pytorch.org/whl/cu116"
+secondary = true
+
+[[tool.poetry.source]]
+name = "pyg"
+url = "https://data.pyg.org/whl/torch-1.12.1+cu116.html"
+secondary = true
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+pytest = "^7.4"
+pytest-sugar = "^0.9.6"
+pre-commit = "^3.2.1"
+black = "^23.3.0"
+mypy = "^1.1.1"
+ruff = "^0.0.270"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]
