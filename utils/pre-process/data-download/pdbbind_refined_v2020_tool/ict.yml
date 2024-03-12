@@ -1,0 +1,42 @@
+specVersion: 0.1.0
+name: labshare/pdbbind-refined-v2020
+version: 0.1.0
+container: polusai/pdbbind-refined-v2020-tool:0.1.0
+entrypoint: ""
+title: pdbbind_refined_v2020
+description: Extracts data from the PDBBind refined dataset
+author: Brandon Walker (brandon.walker@axleinfo.com), Nazanin Donyapour (nazanin.donyapour@nih.gov)
+repository: https://github.com/labshare/mmtools
+documentation: https://ncats.nih.gov/preclinical/core/informatics
+citation: ""
+inputs:
+- name: output_txt_path
+  required: false
+  description: Path to the text dataset file
+  type: string
+  default: /outdir/system.log
+- name: index_file_name
+  required: false
+  description: The index file name
+  type: string
+  default: INDEX_refined_data.2020
+- name: base_dir
+  required: true
+  description: The base_dir path
+  type: string
+- name: query
+  required: false
+  description: "query str to search the dataset, Pandas query doesn't support slash(/) in column names please use Kd_Ki instead of Kd/Ki"
+  type: string
+- name: min_row
+  required: false
+  description: The row min index
+  type: int
+- name: max_row
+  required: false
+  description: The row max index
+  type: int
+- name: convert_Kd_dG
+  required: false
+  description: If this is set to true, dG will be calculated
+  type: boolean
