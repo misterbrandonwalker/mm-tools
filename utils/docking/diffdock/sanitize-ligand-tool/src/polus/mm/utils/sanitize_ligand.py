@@ -162,36 +162,28 @@ def attempt_fix_ligand(
     return valid_lig, molecule
 
 
-def sanitize_ligand(
-    ligand_files: list[Path],
-    outdir: Path,
-) -> None:
+def sanitize_ligand(input_small_mol_ligand: Path) -> None:
     """Sanitize ligand file.
 
     Args:
-        ligand_files: Ligand file pattern
-        outdir: Output directory
+        input_small_mol_ligand: Ligand file
     """
-    for input_small_mol_ligand in ligand_files:
-        output_small_mol_ligand = outdir / Path(input_small_mol_ligand.name)
-        mol: Chem.SDMolSupplier = Chem.SDMolSupplier(
-            input_small_mol_ligand.resolve(),
-            sanitize=False,
-            removeHs=False,
-        )[0]
+    output_small_mol_ligand = Path(input_small_mol_ligand.name)
+    mol: Chem.SDMolSupplier = Chem.SDMolSupplier(
+        input_small_mol_ligand.resolve(),
+        sanitize=False,
+        removeHs=False,
+    )[0]
 
-        valid_ligand = is_valid_ligand(mol)
-        if not valid_ligand:
-            valid_ligand, rdkit_mol = attempt_fix_ligand(mol)
-        else:
-            rdkit_mol = mol
+    valid_ligand = is_valid_ligand(mol)
+    if not valid_ligand:
+        valid_ligand, rdkit_mol = attempt_fix_ligand(mol)
+    else:
+        rdkit_mol = mol
 
-        if valid_ligand:
-            with Chem.SDWriter(output_small_mol_ligand) as w:
-                w.write(rdkit_mol)
+    if valid_ligand:
+        with Chem.SDWriter(output_small_mol_ligand) as w:
+            w.write(rdkit_mol)
 
-    if len(ligand_files) == 1:
-        # if scattering with many files
-        # let the presence of the file indicate validity
-        with outdir.joinpath("valid.txt").open("w", encoding="utf-8") as f:
-            f.write(str(valid_ligand))
+    with Path("valid.txt").open("w", encoding="utf-8") as f:
+        f.write(str(valid_ligand))

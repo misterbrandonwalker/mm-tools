@@ -1,4 +1,4 @@
-# Sanitize Ligand (0.1.1-dev1)
+# Sanitize Ligand (0.1.1-dev2)
 
 Handle molecules with rdkit errors gracefully.
 
