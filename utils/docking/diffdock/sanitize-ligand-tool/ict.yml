@@ -1,0 +1,25 @@
+specVersion: 0.1.0
+name: labshare/sanitize-ligand
+version: 0.1.1-dev2
+container: polusai/sanitize-ligand-tool:0.1.1-dev2
+entrypoint: ""
+title: Sanitize Ligand
+description: Handle molecules with rdkit errors gracefully.
+author: Brandon Walker (brandon.walker@axleinfo.com)
+repository: https://github.com/labshare/polus-plugins
+documentation: https://ncats.nih.gov/preclinical/core/informatics
+citation: ""
+inputs:
+- name: pattern
+  required: true
+  description: Filepattern to parse files
+  type: string
+- name: indir
+  required: true
+  description: Input collection.
+  type: collection
+outputs:
+- name: outdir
+  required: false
+  description: Output collection.
+  type: collection

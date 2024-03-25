@@ -1,15 +1,16 @@
 [tool.poetry]
 name = "mm-polus-sanitize-ligand"
-version = "0.1.1-dev1"
+version = "0.1.1-dev2"
 description = "Handle molecules with rdkit errors gracefully."
 authors = ["Brandon Walker <brandon.walker@axleinfo.com>"]
 readme = "README.md"
 packages = [{include = "polus", from = "src"}]
 
 [tool.poetry.dependencies]
-python = ">=3.8"
+python = ">=3.9,<3.12"
 typer = "^0.7.0"
-rdkit = "*"
+rdkit = "2024.3.3"
+sophios = "0.1.1"
 
 [tool.poetry.group.dev.dependencies]
 bump2version = "^1.0.1"
