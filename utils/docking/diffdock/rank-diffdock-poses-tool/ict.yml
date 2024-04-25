@@ -1,0 +1,50 @@
+specVersion: "0.1.0"
+name: rank_diffdock_poses
+version: 0.1.0
+container: rank-diffdock-poses-tool
+entrypoint:
+title: rank_diffdock_poses
+description: DiffDock Diffusion pose ranking
+author: Brandon Walker
+contact: brandon.walker@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: diffdock_poses
+    required: true
+    description:
+    type: File[]
+    format:
+      uri: edam:format_3814
+  - name: top_n_confident
+    required: true
+    description:
+    type: float
+    defaultValue: 1000
+  - name: top_percent_confidence
+    required: true
+    description:
+    type: float
+    defaultValue: 100
+outputs:
+  - name: output_poses
+    required: true
+    description:
+    type: File[]
+    format:
+      uri: edam:format_3814
+ui:
+  - key: inputs.diffdock_poses
+    title: "diffdock_poses: "
+    description: ""
+    type: File[]
+  - key: inputs.top_n_confident
+    title: "top_n_confident: "
+    description: ""
+    type: float
+  - key: inputs.top_percent_confidence
+    title: "top_percent_confidence: "
+    description: ""
+    type: float
