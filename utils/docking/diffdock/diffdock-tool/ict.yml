@@ -1,0 +1,135 @@
+specVersion: "0.1.0"
+name: diffdock
+version: 0.1.0
+container: diffdock-tool
+entrypoint:
+title: diffdock
+description: DiffDock Diffusion based protein ligand docking
+author: Brandon Walker
+contact: brandon.walker@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: protein_path
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: ligand_path
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3814
+  - name: inference_steps
+    required: true
+    description:
+    type: int
+    defaultValue: 20
+  - name: samples_per_complex
+    required: true
+    description:
+    type: int
+    defaultValue: 40
+  - name: batch_size
+    required: true
+    description:
+    type: int
+    defaultValue: 1
+  - name: out_dir
+    required: true
+    description:
+    type: string
+    defaultValue: results/
+  - name: model_dir
+    required: true
+    description:
+    type: string
+    defaultValue: /DiffDock/workdir/paper_score_model/
+  - name: confidence_model_dir
+    required: true
+    description:
+    type: string
+    defaultValue: /DiffDock/workdir/paper_confidence_model
+  - name: complex_name
+    required: true
+    description:
+    type: string
+    defaultValue: outputs
+  - name: output_files
+    required: true
+    description:
+    type: string
+  - name: max_confident_pose
+    required: true
+    description:
+    type: string
+outputs:
+  - name: max_confident_pose
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3814
+  - name: output_files
+    required: true
+    description:
+    type: File[]
+    format:
+      uri: edam:format_3814
+  - name: stderr
+    required: true
+    description:
+    type: File
+  - name: execution_time
+    required: true
+    description: Time to run DiffDock
+    type: float
+ui:
+  - key: inputs.protein_path
+    title: "protein_path: "
+    description: ""
+    type: File
+  - key: inputs.ligand_path
+    title: "ligand_path: "
+    description: ""
+    type: File
+  - key: inputs.inference_steps
+    title: "inference_steps: "
+    description: ""
+    type: int
+  - key: inputs.samples_per_complex
+    title: "samples_per_complex: "
+    description: ""
+    type: int
+  - key: inputs.batch_size
+    title: "batch_size: "
+    description: ""
+    type: int
+  - key: inputs.out_dir
+    title: "out_dir: "
+    description: ""
+    type: string
+  - key: inputs.model_dir
+    title: "model_dir: "
+    description: ""
+    type: string
+  - key: inputs.confidence_model_dir
+    title: "confidence_model_dir: "
+    description: ""
+    type: string
+  - key: inputs.complex_name
+    title: "complex_name: "
+    description: ""
+    type: string
+  - key: inputs.output_files
+    title: "output_files: "
+    description: ""
+    type: string
+  - key: inputs.max_confident_pose
+    title: "max_confident_pose: "
+    description: ""
+    type: string
