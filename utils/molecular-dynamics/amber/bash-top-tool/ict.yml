@@ -1,0 +1,51 @@
+specVersion: "0.1.0"
+name: bash_top
+version: 0.1.0
+container: bash-top-tool
+entrypoint:
+title: bash_top
+description: Concatentate import statements in AMBER topology file
+author: Data Scientist
+contact: data.scientist@labshare.org
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: script
+    required: true
+    description:
+    type: string
+  - name: input_top_path
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3880
+  - name: output_top_path
+    required: true
+    description:
+    type: string
+    defaultValue: system.top
+    format:
+      uri: edam:format_2330
+outputs:
+  - name: output_top_path
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3880
+ui:
+  - key: inputs.script
+    title: "script: "
+    description: ""
+    type: string
+  - key: inputs.input_top_path
+    title: "input_top_path: "
+    description: ""
+    type: File
+  - key: inputs.output_top_path
+    title: "output_top_path: "
+    description: ""
+    type: string

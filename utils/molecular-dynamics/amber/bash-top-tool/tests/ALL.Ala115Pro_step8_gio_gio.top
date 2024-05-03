@@ -1,0 +1,54 @@
+;
+;	File 'ALL.Ala115Pro_step4_p2g_p2g.top' was generated
+;	By user: unknown (3373)
+;	On host: s04r1b41
+;	At date: Tue Apr 10 08:32:54 2018
+
+;
+;	This is a standalone topology file
+;
+;	Created by:
+;	                 :-) GROMACS - gmx pdb2gmx, VERSION 5.1.2 (-:
+;
+;	Executable:   /gpfs/home/bsc23/bsc23210/gromacs/bin/gmx
+;	Data prefix:  /gpfs/home/bsc23/bsc23210/gromacs
+;	Command line:
+;	  gmx pdb2gmx -f /gpfs/scratch/bsc23/bsc23210/tmp.pjwGKiFyti/dd33c756-035a-41ec-9e5c-ad722dd9f4e7/s04r1b41-ib0/sandBox/job_203/mutated.pdb -o /gpfs/scratch/bsc23/bsc23210/tmp.pjwGKiFyti/dd33c756-035a-41ec-9e5c-ad722dd9f4e7/s04r1b41-ib0/sandBox/job_203/p2g.gro -p ALL.Ala115Pro_step4_p2g_p2g.top -water tip3p -ff amber99sb -i ALL.Ala115Pro_step4_p2g_p2g.itp -ignh
+;	Force field was read from the standard GROMACS share directory.
+;
+
+; Include forcefield parameters
+#include "amber99sb.ff/forcefield.itp"
+
+; Include chain topologies
+#include "ALL.Ala115Pro_step4_p2g_p2g_Protein_chain_A.itp"
+#include "ALL.Ala115Pro_step4_p2g_p2g_Protein_chain_B.itp"
+#include "ALL.Ala115Pro_step4_p2g_p2g_Protein_chain_C.itp"
+#include "ALL.Ala115Pro_step4_p2g_p2g_Protein_chain_D.itp"
+
+; Include water topology
+#include "amber99sb.ff/tip3p.itp"
+
+#ifdef POSRES_WATER
+; Position restraint for each water oxygen
+[ position_restraints ]
+;  i funct       fcx        fcy        fcz
+   1    1       1000       1000       1000
+#endif
+
+; Include topology for ions
+#include "amber99sb.ff/ions.itp"
+
+[ system ]
+; Name
+Protein in water
+
+[ molecules ]
+; Compound        #mols
+Protein_chain_A     1
+Protein_chain_B     1
+Protein_chain_C     1
+Protein_chain_D     1
+SOL         121173
+NA               128
+CL               120
