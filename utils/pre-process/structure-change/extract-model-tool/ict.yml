@@ -1,0 +1,51 @@
+specVersion: "0.1.0"
+name: extract_model
+version: 0.1.0
+container: extract-model-tool
+entrypoint:
+title: extract_model
+description: This class is a wrapper of the Structure Checking tool to extract a model from a 3D structure.
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: input_structure_path
+    required: true
+    description: Input structure file path, Type string, File type input, Accepted formats pdb, pdbqt, Example file https//github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/data/utils/extract_model.pdb
+    type: File
+    format:
+      uri: edam:format_1476, edam:format_1476
+  - name: output_structure_path
+    required: true
+    description: Output structure file path, Type string, File type output, Accepted formats pdb, pdbqt, Example file https//github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/reference/utils/ref_extract_model.pdb
+    type: string
+    defaultValue: system.pdb
+    format:
+      uri: edam:format_1476, edam:format_1476
+  - name: config
+    required: true
+    description: Advanced configuration options for biobb_structure_utils ExtractModel. This should be passed as a string containing a dict. The possible options to include here are listed under 'properties' in the biobb_structure_utils ExtractModel documentation https//biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.extract_model
+    type: string
+outputs:
+  - name: output_structure_path
+    required: true
+    description: Output structure file path
+    type: File
+    format:
+      uri: edam:format_1476
+ui:
+  - key: inputs.input_structure_path
+    title: "input_structure_path: "
+    description: "Input structure file path, Type string, File type input, Accepted formats pdb, pdbqt, Example file https//github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/data/utils/extract_model.pdb"
+    type: File
+  - key: inputs.output_structure_path
+    title: "output_structure_path: "
+    description: "Output structure file path, Type string, File type output, Accepted formats pdb, pdbqt, Example file https//github.com/bioexcel/biobb_structure_utils/raw/master/biobb_structure_utils/test/reference/utils/ref_extract_model.pdb"
+    type: string
+  - key: inputs.config
+    title: "config: "
+    description: "Advanced configuration options for biobb_structure_utils ExtractModel. This should be passed as a string containing a dict. The possible options to include here are listed under 'properties' in the biobb_structure_utils ExtractModel documentation https//biobb-structure-utils.readthedocs.io/en/latest/utils.html#module-utils.extract_model"
+    type: string
