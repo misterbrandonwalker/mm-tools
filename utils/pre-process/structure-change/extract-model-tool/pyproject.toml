@@ -7,9 +7,13 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
+<<<<<<< HEAD
 typer = "^0.7.0"
 cwl-utils = "0.33"
 cwltool = "3.1.20240404144621"
+=======
+sophios = "0.1.1"
+>>>>>>> cff8349 (extract-model)
 
 [tool.poetry.group.dev.dependencies]
 bump2version = "^1.0.1"
