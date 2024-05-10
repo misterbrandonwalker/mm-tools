@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "polus-mm-utils-smina-docking"
+version = "0.1.0"
+description = "Smina docking tool to perform protein-ligand docking"
+authors = ["Data Scientist <data.scientist@labshare.org>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.12"
+sophios = "0.1.1"
+
+[tool.poetry.group.dev.dependencies]
+bump2version = "^1.0.1"
+pytest = "^7.4"
+pytest-sugar = "^0.9.6"
+pre-commit = "^3.2.1"
+black = "^23.3.0"
+mypy = "^1.1.1"
+ruff = "^0.0.270"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+pythonpath = [
+  "."
+]

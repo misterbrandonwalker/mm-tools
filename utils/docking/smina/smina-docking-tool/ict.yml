@@ -1,0 +1,84 @@
+specVersion: "0.1.0"
+name: smina_docking
+version: 0.1.0
+container: smina-docking-tool
+entrypoint:
+title: smina_docking
+description: Smina docking tool to perform protein-ligand docking
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: receptor_file
+    required: true
+    description: Path to the input receptor file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2
+    type: File
+    format:
+      uri: edam:format_1476, edam:format_3814, edam:format_3815, edam:format_3816
+  - name: ligand_file
+    required: true
+    description: Path to the input ligand file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2
+    type: File
+    format:
+      uri: edam:format_1476, edam:format_3814, edam:format_3815, edam:format_3816
+  - name: ligand_box
+    required: true
+    description: Path to the input docking box file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2
+    type: File
+    format:
+      uri: edam:format_1476, edam:format_3814, edam:format_3815, edam:format_3816
+  - name: scoring
+    required: true
+    description:
+    type: string
+    defaultValue: vina
+  - name: output_dock_file
+    required: true
+    description:
+    type: string
+    defaultValue: docked.pdb
+    format:
+      uri: edam:format_1476
+  - name: output_path
+    required: true
+    description:
+    type: string
+outputs:
+  - name: output_dock_file
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: output_path
+    required: true
+    description:
+    type: File
+ui:
+  - key: inputs.receptor_file
+    title: "receptor_file: "
+    description: "Path to the input receptor file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2"
+    type: File
+  - key: inputs.ligand_file
+    title: "ligand_file: "
+    description: "Path to the input ligand file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2"
+    type: File
+  - key: inputs.ligand_box
+    title: "ligand_box: "
+    description: "Path to the input docking box file, Type string?, File type input, Accepted formats pdb, pdbqt, sdf, mol, mol2"
+    type: File
+  - key: inputs.scoring
+    title: "scoring: "
+    description: ""
+    type: string
+  - key: inputs.output_dock_file
+    title: "output_dock_file: "
+    description: ""
+    type: string
+  - key: inputs.output_path
+    title: "output_path: "
+    description: ""
+    type: string
