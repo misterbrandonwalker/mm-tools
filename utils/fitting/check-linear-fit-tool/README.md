@@ -4,7 +4,7 @@ check_linear_fit
 
 ## Options
 
-This plugin takes     6     input arguments and 1 output argument:
+This plugin takes 6 input arguments and 1 output argument:
 
 | Name          | Description             | I/O    | Type   | Default |
 |---------------|-------------------------|--------|--------|---------|
