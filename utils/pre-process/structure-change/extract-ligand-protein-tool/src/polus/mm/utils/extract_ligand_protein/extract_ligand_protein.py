@@ -51,15 +51,15 @@ def extract_single_ligand_protein(  # noqa: PLR0912
     except MDAnalysis.exceptions.NoDataError:
         print("No bonds found in the PDB file.")  # noqa: T201
 
-    # Identify water molecules based on the
-    # connectivity pattern (Oxygen bonded to two Hydrogens)
+    # Identify water molecules based on the connectivity
+    # pattern (Oxygen bonded to two Hydrogens)
     if has_bonds:
         water_indices = set()
         for atom in dup_u.atoms:  # dont use selection resname == 'HOH',
             # pdb file may have different water residue names
-            h_bonds = 2
+            num_bonds = 2
             if (
-                atom.name == "O" and len(atom.bonds) == h_bonds
+                atom.name == "O" and len(atom.bonds) == num_bonds
             ):  # if hydrogens are added
                 bonded_atoms_names = {a.name for a in atom.bonded_atoms}
                 if bonded_atoms_names == {"H"}:  # Check if both bonds are Hydrogens
@@ -90,9 +90,14 @@ def extract_single_ligand_protein(  # noqa: PLR0912
     )  # needed for coordinates
     ligand_u.atoms = ligand_atoms
 
-    protein_u.atoms.write(str(output_pdb_path))
+    with output_pdb_path.open(mode="w", encoding="utf-8") as output_file:
+        protein_u.atoms.write(output_file)
     if len(ligand_u.atoms) > 0:  # will crash if no ligand atoms
-        ligand_u.atoms.write(str(output_pdb_ligand_path))
+        with output_pdb_ligand_path.open(
+            mode="w",
+            encoding="utf-8",
+        ) as output_ligand_file:
+            ligand_u.atoms.write(output_ligand_file)
 
 
 def extract_all_ligand_protein(input_pdb_path: list[Path], outdir: Path) -> None:

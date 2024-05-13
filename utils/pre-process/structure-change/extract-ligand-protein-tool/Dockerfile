@@ -1,3 +1,4 @@
+# docker build -f Dockerfile -t polusai/extract-ligand-protein-tool .
 FROM condaforge/mambaforge
 
 ENV EXEC_DIR="/opt/executables"
@@ -14,11 +15,6 @@ COPY README.md ${EXEC_DIR}
 COPY CHANGELOG.md ${EXEC_DIR}
 
 # Install needed packages here
-
-RUN pip install filepattern
-RUN conda config --add channels conda-forge
-RUN conda install mdanalysis
-
 
 COPY src ${EXEC_DIR}/src
 

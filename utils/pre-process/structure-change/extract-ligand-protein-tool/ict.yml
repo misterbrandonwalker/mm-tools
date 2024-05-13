@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: extract_ligand_protein
 version: 0.1.0
-container: extract-ligand-protein-plugin
+container: extract-ligand-protein-tool
 entrypoint:
 title: extract_ligand_protein
 description: A tool that employs OpenMM to extract ligands and protein from a PDB file
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker
+contact: brandon.walker@axleinfo.com
 repository:
 documentation:
 citation:
