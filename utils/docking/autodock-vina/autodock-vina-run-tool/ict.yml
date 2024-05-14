@@ -1,0 +1,88 @@
+specVersion: "0.1.0"
+name: autodock_vina_run
+version: 0.1.0
+container: autodock-vina-run-tool
+entrypoint:
+title: autodock_vina_run
+description: Wrapper of the AutoDock Vina software.
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: input_ligand_pdbqt_path
+    required: true
+    description: Path to the input PDBQT ligand, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_ligand.pdbqt
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: input_receptor_pdbqt_path
+    required: true
+    description: Path to the input PDBQT receptor, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_receptor.pdbqt
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: input_box_path
+    required: true
+    description: Path to the PDB containig the residues belonging to the binding site, Type string, File type input, Accepted formats pdb, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_box.pdb
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: output_pdbqt_path
+    required: true
+    description: Path to the output PDBQT file, Type string, File type output, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.pdbqt
+    type: string
+    defaultValue: system.pdbqt
+    format:
+      uri: edam:format_1476
+  - name: output_log_path
+    required: true
+    description: Path to the log file, Type string, File type output, Accepted formats log, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.log
+    type: string
+    defaultValue: system.log
+    format:
+      uri: edam:format_2330
+  - name: config
+    required: true
+    description: Advanced configuration options for biobb_vs AutoDockVinaRun. This should be passed as a string containing a dict. The possible options to include here are listed under 'properties' in the biobb_vs AutoDockVinaRun documentation https//biobb-vs.readthedocs.io/en/latest/vina.html#module-vina.autodock_vina_run
+    type: string
+outputs:
+  - name: output_pdbqt_path
+    required: true
+    description: Path to the output PDBQT file
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: output_log_path
+    required: true
+    description: Path to the log file
+    type: File
+    format:
+      uri: edam:format_2330
+ui:
+  - key: inputs.input_ligand_pdbqt_path
+    title: "input_ligand_pdbqt_path: "
+    description: "Path to the input PDBQT ligand, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_ligand.pdbqt"
+    type: File
+  - key: inputs.input_receptor_pdbqt_path
+    title: "input_receptor_pdbqt_path: "
+    description: "Path to the input PDBQT receptor, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_receptor.pdbqt"
+    type: File
+  - key: inputs.input_box_path
+    title: "input_box_path: "
+    description: "Path to the PDB containig the residues belonging to the binding site, Type string, File type input, Accepted formats pdb, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_box.pdb"
+    type: File
+  - key: inputs.output_pdbqt_path
+    title: "output_pdbqt_path: "
+    description: "Path to the output PDBQT file, Type string, File type output, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.pdbqt"
+    type: string
+  - key: inputs.output_log_path
+    title: "output_log_path: "
+    description: "Path to the log file, Type string, File type output, Accepted formats log, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.log"
+    type: string
+  - key: inputs.config
+    title: "config: "
+    description: "Advanced configuration options for biobb_vs AutoDockVinaRun. This should be passed as a string containing a dict. The possible options to include here are listed under 'properties' in the biobb_vs AutoDockVinaRun documentation https//biobb-vs.readthedocs.io/en/latest/vina.html#module-vina.autodock_vina_run"
+    type: string
