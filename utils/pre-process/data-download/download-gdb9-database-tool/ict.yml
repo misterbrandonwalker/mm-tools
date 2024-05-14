@@ -1,0 +1,67 @@
+specVersion: "0.1.0"
+name: download_gdb9_database
+version: 0.1.0
+container: download-gdb9-database-tool
+entrypoint:
+title: download_gdb9_database
+description: Download MolGAN models and datasets
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: output_sdf_path
+    required: true
+    description: Path to the output file, Type string, File type output, Accepted formats sdf
+    type: string
+    defaultValue: system.sdf
+    format:
+      uri: edam:format_3814
+  - name: output_NP_Score_path
+    required: true
+    description: Output ceout file (AMBER ceout), Type string, File type output, Accepted formats gz, Example file https//github.com/bioexcel/biobb_amber/raw/master/biobb_amber/test/data/cphstats/sander.ceout.gz
+    type: string
+    defaultValue: NP.gz
+    format:
+      uri: edam:format_3987
+  - name: output_SA_Score_path
+    required: true
+    description: Output ceout file (AMBER ceout), Type string, File type output, Accepted formats gz, Example file https//github.com/bioexcel/biobb_amber/raw/master/biobb_amber/test/data/cphstats/sander.ceout.gz
+    type: string
+    defaultValue: SA.gz
+    format:
+      uri: edam:format_3987
+outputs:
+  - name: output_sdf_path
+    required: true
+    description: Path to the output file
+    type: File
+    format:
+      uri: edam:format_3814
+  - name: output_NP_Score_path
+    required: true
+    description: Output ceout file
+    type: File
+    format:
+      uri: edam:format_3987
+  - name: output_SA_Score_path
+    required: true
+    description: Output ceout file
+    type: File
+    format:
+      uri: edam:format_3987
+ui:
+  - key: inputs.output_sdf_path
+    title: "output_sdf_path: "
+    description: "Path to the output file, Type string, File type output, Accepted formats sdf"
+    type: string
+  - key: inputs.output_NP_Score_path
+    title: "output_NP_Score_path: "
+    description: "Output ceout file (AMBER ceout), Type string, File type output, Accepted formats gz, Example file https//github.com/bioexcel/biobb_amber/raw/master/biobb_amber/test/data/cphstats/sander.ceout.gz"
+    type: string
+  - key: inputs.output_SA_Score_path
+    title: "output_SA_Score_path: "
+    description: "Output ceout file (AMBER ceout), Type string, File type output, Accepted formats gz, Example file https//github.com/bioexcel/biobb_amber/raw/master/biobb_amber/test/data/cphstats/sander.ceout.gz"
+    type: string
