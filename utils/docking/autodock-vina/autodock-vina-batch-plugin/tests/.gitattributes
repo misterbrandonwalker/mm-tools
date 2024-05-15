@@ -1,0 +1,2 @@
+*.pdb filter=lfs diff=lfs merge=lfs -text
+*.pdbqt filter=lfs diff=lfs merge=lfs -text
