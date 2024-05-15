@@ -1,0 +1,79 @@
+specVersion: "0.1.0"
+name: autodock_vina_batch
+version: 0.1.0
+container: autodock-vina-batch-plugin
+entrypoint:
+title: autodock_vina_batch
+description: Wrapper of the AutoDock Vina software.
+author: Data Scientist
+contact: data.scientist@labshare.org
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: input_batch_pdbqt_path
+    required: true
+    description: Path to the input PDBQT ligands, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_ligand.pdbqt
+    type: File[]
+    format:
+      uri: edam:format_1476
+  - name: input_receptor_pdbqt_path
+    required: true
+    description: Path to the input PDBQT receptor, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_receptor.pdbqt
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: input_box_path
+    required: true
+    description: Path to the PDB containing the residues belonging to the binding site, Type string, File type input, Accepted formats pdb, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_box.pdb
+    type: File
+    format:
+      uri: edam:format_1476
+  - name: output_batch_pdbqt_path
+    required: true
+    description: Path to the output PDBQT batch directory, Type string, File type output, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.pdbqt
+    type: string
+    format:
+      uri: edam:format_1476
+  - name: output_log_path
+    required: true
+    description: Path to the log file, Type string, File type output, Accepted formats log, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.log
+    type: string
+    defaultValue: system.log
+    format:
+      uri: edam:format_2330
+outputs:
+  - name: output_batch_pdbqt_path
+    required: true
+    description: Path to the output PDBQT files
+    type: {'type': 'array', 'items': 'File'}
+    format:
+      uri: edam:format_1476
+  - name: output_log_path
+    required: true
+    description: Path to the log file
+    type: File
+    format:
+      uri: edam:format_2330
+ui:
+  - key: inputs.input_batch_pdbqt_path
+    title: "input_batch_pdbqt_path: "
+    description: "Path to the input PDBQT ligands, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_ligand.pdbqt"
+    type: File[]
+  - key: inputs.input_receptor_pdbqt_path
+    title: "input_receptor_pdbqt_path: "
+    description: "Path to the input PDBQT receptor, Type string, File type input, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_receptor.pdbqt"
+    type: File
+  - key: inputs.input_box_path
+    title: "input_box_path: "
+    description: "Path to the PDB containing the residues belonging to the binding site, Type string, File type input, Accepted formats pdb, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/data/vina/vina_box.pdb"
+    type: File
+  - key: inputs.output_batch_pdbqt_path
+    title: "output_batch_pdbqt_path: "
+    description: "Path to the output PDBQT batch directory, Type string, File type output, Accepted formats pdbqt, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.pdbqt"
+    type: string
+  - key: inputs.output_log_path
+    title: "output_log_path: "
+    description: "Path to the log file, Type string, File type output, Accepted formats log, Example file https//github.com/bioexcel/biobb_vs/raw/master/biobb_vs/test/reference/vina/ref_output_vina.log"
+    type: string
