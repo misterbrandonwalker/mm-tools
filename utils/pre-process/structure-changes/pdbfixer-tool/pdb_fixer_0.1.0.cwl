@@ -12,7 +12,7 @@ baseCommand: ["python", "-m", "polus.mm.utils.pdbfixer"]
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/pdbfixer
+    dockerPull: polusai/pdbfixer-tool@sha256:a44142a9b23b60950bdc2cb7d6c760f4216cc7f59dad0468f92ff87a976f3ab2
 
 inputs:
   input_pdb_path:
