@@ -1,4 +1,4 @@
-# docker build -f Dockerfile -t mrbrandonwalker/pdbfixer .
+# docker build -f Dockerfile -t polusai/pdbfixer-tool:0.1.0 .
 
 FROM condaforge/mambaforge
 # pdbfixer not installable with poetry
