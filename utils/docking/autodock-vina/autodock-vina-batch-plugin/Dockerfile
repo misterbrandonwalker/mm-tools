@@ -1,4 +1,4 @@
-# docker build -f Dockerfile -t mrbrandonwalker/autodock_vina_tool .
+# docker build -f Dockerfile -t polusai/autodock-vina-tool .
 FROM condaforge/mambaforge-pypy3
 
 # The latest release version 1.2.3 has several known bugs.

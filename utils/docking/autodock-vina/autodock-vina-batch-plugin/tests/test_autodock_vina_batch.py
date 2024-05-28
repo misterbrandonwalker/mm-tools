@@ -3,7 +3,7 @@ import sys
 from pathlib import Path
 
 current_dir = Path(__file__).resolve().parent
-target_dir = current_dir.parent.parent.parent / "cwl_utils"
+target_dir = current_dir.parent.parent.parent.parent.parent / "cwl_utils"
 sys.path.append(str(target_dir))
 
 from cwl_utilities import call_cwltool  # noqa: E402
@@ -26,5 +26,7 @@ def test_autodock_vina_batch() -> None:
     input_to_props["input_box_path"]["path"] = file_path
     input_yaml_path = Path("autodock_vina_batch_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
-    call_cwltool(cwl_file, input_yaml_path)
+    stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
+    print(stdout)  # noqa: T201
+    print(stderr)  # noqa: T201
     assert Path("system.log").exists()
