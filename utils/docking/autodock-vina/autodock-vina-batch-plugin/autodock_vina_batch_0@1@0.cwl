@@ -52,7 +52,7 @@ arguments:
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/autodock_vina_tool
+    dockerPull: polusai/autodock-vina-tool@sha256:80598dc9b84dda48ad6f8244043738eb6d4219155ddff085361701a422e5207d
 
 requirements:
   InlineJavascriptRequirement: {}

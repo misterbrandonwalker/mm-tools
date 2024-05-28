@@ -4,12 +4,11 @@ version = "0.1.0"
 description = "Wrapper of the AutoDock Vina software."
 authors = ["Data Scientist <data.scientist@labshare.org>"]
 readme = "README.md"
+package-mode = false
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-typer = "^0.7.0"
-cwl-utils = "0.33"
-cwltool = "3.1.20240404144621"
+sophios = "0.1.1"
 
 [tool.poetry.group.dev.dependencies]
 bump2version = "^1.0.1"

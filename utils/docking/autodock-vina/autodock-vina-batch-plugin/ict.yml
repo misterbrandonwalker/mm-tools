@@ -5,8 +5,8 @@ container: autodock-vina-batch-plugin
 entrypoint:
 title: autodock_vina_batch
 description: Wrapper of the AutoDock Vina software.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
