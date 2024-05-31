@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: append_ligand
 version: 0.1.0
-container: append-ligand-plugin
+container: append-ligand-tool
 entrypoint:
 title: append_ligand
 description: This class takes a ligand ITP file and inserts it in a topology.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
