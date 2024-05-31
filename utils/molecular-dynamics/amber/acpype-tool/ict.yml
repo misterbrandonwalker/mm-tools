@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: acpype
 version: 0.1.0
-container: acpype-plugin
+container: acpype-tool
 entrypoint:
 title: acpype
 description: This class is a wrapper of Acpype tool for generation of topologies for GROMACS.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
