@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: array_indices
 version: 0.1.0
-container: array-indices-plugin
+container: array-indices-tool
 entrypoint:
 title: array_indices
 description: return a subset from a array based on input indices
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
