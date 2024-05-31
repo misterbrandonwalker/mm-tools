@@ -12,7 +12,7 @@ baseCommand: ["conda", "run", "-n", "project_env", "python", "-m", "polus.mm.uti
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/combine_structure_tool
+    dockerPull: polusai/combine-structure-tool@sha256:860eac0403aaadc1d76a46ba1cb47e359f05338af6fc7be47ccb495f86764de0
 
 inputs:
   input_structure1:
