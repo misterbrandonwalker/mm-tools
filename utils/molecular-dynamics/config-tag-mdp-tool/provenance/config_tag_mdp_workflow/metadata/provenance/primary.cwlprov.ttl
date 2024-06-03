@@ -1,0 +1,131 @@
+@prefix cwlprov: <https://w3id.org/cwl/prov#> .
+@prefix data: <urn:hash::sha1:> .
+@prefix id: <urn:uuid:> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wf: <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#> .
+@prefix wfdesc: <http://purl.org/wf4ever/wfdesc#> .
+@prefix wfprov: <http://purl.org/wf4ever/wfprov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+cwlprov:None a prov:Entity ;
+    rdfs:label "None"^^xsd:string ;
+    prov:qualifiedGeneration [ a prov:Generation ;
+            prov:activity id:9a41dad8-a1b5-4a5d-825b-437da47258d6 ;
+            prov:atTime "2024-07-30T14:16:07.309782"^^xsd:dateTime ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/primary/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___output_config_string> ] .
+
+id:c2e2034a-7838-44e9-9479-adefca3550f1 a wfprov:ProcessRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400> ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-30T14:16:07.308537"^^xsd:dateTime ;
+            prov:hadActivity id:9a41dad8-a1b5-4a5d-825b-437da47258d6 ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-30T14:16:07.067550"^^xsd:dateTime ;
+            prov:hadActivity id:9a41dad8-a1b5-4a5d-825b-437da47258d6 ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.068123"^^xsd:dateTime ;
+            prov:entity data:dc0dbba18d47b040109f16862d39de918039856d ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/config> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.068324"^^xsd:dateTime ;
+            prov:entity id:c7cc3c24-3190-432a-bc96-bdc8c304fcb6 ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/ref_p> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.068382"^^xsd:dateTime ;
+            prov:entity id:8b4817d4-1b47-4291-ad9a-1de0e0af2422 ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/ref_t> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.068254"^^xsd:dateTime ;
+            prov:entity id:10fd9e9c-5227-4617-ad0e-65cbcc3eb7a9 ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/nsteps> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.068194"^^xsd:dateTime ;
+            prov:entity id:4cb14849-a2f9-4113-8712-16ac3be08dbc ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/dt> ] ;
+    prov:wasAssociatedWith id:49b7c1d9-09c2-4607-b6de-a68051d1aaca .
+
+wf:main a wfdesc:Workflow,
+        prov:Entity,
+        prov:Plan ;
+    rdfs:label "Prospective provenance"^^xsd:string ;
+    wfdesc:hasSubProcess <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400> .
+
+id:0eeb0e65-6b4e-402a-abcf-5b08cdf5b9db a prov:Entity ;
+    prov:value 2.98e+02 .
+
+id:10fd9e9c-5227-4617-ad0e-65cbcc3eb7a9 a prov:Entity ;
+    prov:value "10000"^^xsd:int .
+
+id:3dad8691-b8f9-4b53-bc77-22e0a16f41c7 a prov:Entity ;
+    prov:value 1e+00 .
+
+id:4aadde66-443a-42fe-a7de-62bc8b465c89 a prov:Entity ;
+    prov:value "10000"^^xsd:int .
+
+id:4cb14849-a2f9-4113-8712-16ac3be08dbc a prov:Entity ;
+    prov:value 2e-02 .
+
+id:8b4817d4-1b47-4291-ad9a-1de0e0af2422 a prov:Entity ;
+    prov:value 2.98e+02 .
+
+id:b032933c-ac36-47f7-bf12-a700a67617f0 a prov:Agent .
+
+id:bd639999-e2b4-40a4-b469-9047cec5249e a prov:Entity ;
+    prov:value 2e-02 .
+
+id:c7cc3c24-3190-432a-bc96-bdc8c304fcb6 a prov:Entity ;
+    prov:value 1e+00 .
+
+<arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400> a wfdesc:Process,
+        prov:Entity,
+        prov:Plan .
+
+data:dc0dbba18d47b040109f16862d39de918039856d a wfprov:Artifact,
+        prov:Entity ;
+    prov:value "\"{\\\"mdp\\\": {\\\"integrator\\\": \\\"md\\\", \\\"rvdw\\\": 1.0,             \\\"rcoulomb\\\": 1.0, \\\"coulombtype\\\":                     \\\"PME\\\", \\\"tc-grps\\\": \\\"system\\\",                         \\\"tau-t\\\": 2, \\\"constraints\\\":                             \\\"h-bonds\\\", \\\"nstxout\\\":                     1000, \\\"nstenergy\\\": 1000, \\\"pcoupl\\\":                         \\\"Parrinello-Rahman\\\", \\\"tau-p\\\": 1,                     \\\"compressibility\\\": 4.5e-5, \\\"comm-mode\\\":                         \\\"Linear\\\", \\\"comm-grps\\\": \\\"system\\\"}}\""^^xsd:string .
+
+id:9a41dad8-a1b5-4a5d-825b-437da47258d6 a wfprov:WorkflowRun,
+        prov:Activity ;
+    rdfs:label "Run of workflow/packed.cwl#main"^^xsd:string ;
+    prov:qualifiedAssociation [ a prov:Association ;
+            prov:hadPlan wf:main ] ;
+    prov:qualifiedEnd [ a prov:End ;
+            prov:atTime "2024-07-30T14:16:07.309888"^^xsd:dateTime ;
+            prov:hadActivity id:49b7c1d9-09c2-4607-b6de-a68051d1aaca ] ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-30T14:16:06.727967"^^xsd:dateTime ;
+            prov:hadActivity id:49b7c1d9-09c2-4607-b6de-a68051d1aaca ] ;
+    prov:qualifiedUsage [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.064896"^^xsd:dateTime ;
+            prov:entity id:0eeb0e65-6b4e-402a-abcf-5b08cdf5b9db ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___ref_t> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.064715"^^xsd:dateTime ;
+            prov:entity id:bd639999-e2b4-40a4-b469-9047cec5249e ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___dt> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.064609"^^xsd:dateTime ;
+            prov:entity data:dc0dbba18d47b040109f16862d39de918039856d ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___config> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.064776"^^xsd:dateTime ;
+            prov:entity id:4aadde66-443a-42fe-a7de-62bc8b465c89 ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___nsteps> ],
+        [ a prov:Usage ;
+            prov:atTime "2024-07-30T14:16:07.064839"^^xsd:dateTime ;
+            prov:entity id:3dad8691-b8f9-4b53-bc77-22e0a16f41c7 ;
+            prov:hadRole <arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___ref_p> ] ;
+    prov:startedAtTime "2024-07-30T14:16:06.727901"^^xsd:dateTime ;
+    prov:wasAssociatedWith id:49b7c1d9-09c2-4607-b6de-a68051d1aaca .
+
+id:49b7c1d9-09c2-4607-b6de-a68051d1aaca a wfprov:WorkflowEngine,
+        prov:Agent,
+        prov:SoftwareAgent ;
+    rdfs:label "cwltool 3.1.20240404144621"^^xsd:string ;
+    prov:qualifiedStart [ a prov:Start ;
+            prov:atTime "2024-07-30T14:16:06.727868"^^xsd:dateTime ;
+            prov:hadActivity id:b032933c-ac36-47f7-bf12-a700a67617f0 ] .

@@ -33,13 +33,13 @@ inputs:
       The length of each timestep
     type: float
 
-  ref-t:
+  ref_t:
     label: The nominal temperature
     doc: |-
       The nominal temperature
     type: float
 
-  ref-p:
+  ref_p:
     label: The nominal pressure
     doc: |-
       The nominal pressure

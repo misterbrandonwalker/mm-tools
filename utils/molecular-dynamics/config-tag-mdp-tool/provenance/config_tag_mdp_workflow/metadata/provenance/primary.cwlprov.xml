@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='ASCII'?>
+<prov:document xmlns:wfprov="http://purl.org/wf4ever/wfprov#" xmlns:wfdesc="http://purl.org/wf4ever/wfdesc#" xmlns:cwlprov="https://w3id.org/cwl/prov#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:schema="http://schema.org/" xmlns:orcid="https://orcid.org/" xmlns:id="urn:uuid:" xmlns:data="urn:hash::sha1:" xmlns:sha256="nih:sha-256;" xmlns:researchobject="arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/" xmlns:metadata="arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/metadata/" xmlns:provenance="arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/metadata/provenance/" xmlns:wf="arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/packed.cwl#" xmlns:input="arcp://uuid,9a41dad8-a1b5-4a5d-825b-437da47258d6/workflow/primary-job.json#" xmlns:prov="http://www.w3.org/ns/prov#" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <prov:agent prov:id="id:b032933c-ac36-47f7-bf12-a700a67617f0"/>
+  <prov:softwareAgent prov:id="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca">
+    <prov:label>cwltool 3.1.20240404144621</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowEngine</prov:type>
+  </prov:softwareAgent>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca"/>
+    <prov:starter prov:ref="id:b032933c-ac36-47f7-bf12-a700a67617f0"/>
+    <prov:time>2024-07-30T14:16:06.727868</prov:time>
+  </prov:wasStartedBy>
+  <prov:activity prov:id="id:9a41dad8-a1b5-4a5d-825b-437da47258d6">
+    <prov:startTime>2024-07-30T14:16:06.727901</prov:startTime>
+    <prov:label>Run of workflow/packed.cwl#main</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:WorkflowRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:agent prov:ref="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca"/>
+    <prov:plan prov:ref="wf:main"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:starter prov:ref="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca"/>
+    <prov:time>2024-07-30T14:16:06.727967</prov:time>
+  </prov:wasStartedBy>
+  <prov:plan prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <prov:type xsi:type="xsd:QName">wfdesc:Workflow</prov:type>
+  </prov:plan>
+  <prov:plan prov:id="wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400">
+    <prov:type xsi:type="xsd:QName">wfdesc:Process</prov:type>
+  </prov:plan>
+  <prov:entity prov:id="wf:main">
+    <prov:label>Prospective provenance</prov:label>
+    <wfdesc:hasSubProcess xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400</wfdesc:hasSubProcess>
+  </prov:entity>
+  <prov:entity prov:id="data:dc0dbba18d47b040109f16862d39de918039856d">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">"{\"mdp\": {\"integrator\": \"md\", \"rvdw\": 1.0,             \"rcoulomb\": 1.0, \"coulombtype\":                     \"PME\", \"tc-grps\": \"system\",                         \"tau-t\": 2, \"constraints\":                             \"h-bonds\", \"nstxout\":                     1000, \"nstenergy\": 1000, \"pcoupl\":                         \"Parrinello-Rahman\", \"tau-p\": 1,                     \"compressibility\": 4.5e-5, \"comm-mode\":                         \"Linear\", \"comm-grps\": \"system\"}}"</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:entity prov:ref="data:dc0dbba18d47b040109f16862d39de918039856d"/>
+    <prov:time>2024-07-30T14:16:07.064609</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___config</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:bd639999-e2b4-40a4-b469-9047cec5249e">
+    <prov:value xsi:type="xsd:double">0.02</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:entity prov:ref="id:bd639999-e2b4-40a4-b469-9047cec5249e"/>
+    <prov:time>2024-07-30T14:16:07.064715</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___dt</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:4aadde66-443a-42fe-a7de-62bc8b465c89">
+    <prov:value xsi:type="xsd:int">10000</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:entity prov:ref="id:4aadde66-443a-42fe-a7de-62bc8b465c89"/>
+    <prov:time>2024-07-30T14:16:07.064776</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___nsteps</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:3dad8691-b8f9-4b53-bc77-22e0a16f41c7">
+    <prov:value xsi:type="xsd:double">1.0</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:entity prov:ref="id:3dad8691-b8f9-4b53-bc77-22e0a16f41c7"/>
+    <prov:time>2024-07-30T14:16:07.064839</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___ref_p</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:0eeb0e65-6b4e-402a-abcf-5b08cdf5b9db">
+    <prov:value xsi:type="xsd:double">298.0</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:entity prov:ref="id:0eeb0e65-6b4e-402a-abcf-5b08cdf5b9db"/>
+    <prov:time>2024-07-30T14:16:07.064896</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___ref_t</prov:role>
+  </prov:used>
+  <prov:activity prov:id="id:c2e2034a-7838-44e9-9479-adefca3550f1">
+    <prov:label>Run of workflow/packed.cwl#main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400</prov:label>
+    <prov:type xsi:type="xsd:QName">wfprov:ProcessRun</prov:type>
+  </prov:activity>
+  <prov:wasAssociatedWith>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:agent prov:ref="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca"/>
+    <prov:plan prov:ref="wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0%401%400"/>
+  </prov:wasAssociatedWith>
+  <prov:wasStartedBy>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:starter prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:time>2024-07-30T14:16:07.067550</prov:time>
+  </prov:wasStartedBy>
+  <prov:entity prov:id="data:dc0dbba18d47b040109f16862d39de918039856d">
+    <prov:type xsi:type="xsd:QName">wfprov:Artifact</prov:type>
+    <prov:value xsi:type="xsd:string">"{\"mdp\": {\"integrator\": \"md\", \"rvdw\": 1.0,             \"rcoulomb\": 1.0, \"coulombtype\":                     \"PME\", \"tc-grps\": \"system\",                         \"tau-t\": 2, \"constraints\":                             \"h-bonds\", \"nstxout\":                     1000, \"nstenergy\": 1000, \"pcoupl\":                         \"Parrinello-Rahman\", \"tau-p\": 1,                     \"compressibility\": 4.5e-5, \"comm-mode\":                         \"Linear\", \"comm-grps\": \"system\"}}"</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:entity prov:ref="data:dc0dbba18d47b040109f16862d39de918039856d"/>
+    <prov:time>2024-07-30T14:16:07.068123</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/config</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:4cb14849-a2f9-4113-8712-16ac3be08dbc">
+    <prov:value xsi:type="xsd:double">0.02</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:entity prov:ref="id:4cb14849-a2f9-4113-8712-16ac3be08dbc"/>
+    <prov:time>2024-07-30T14:16:07.068194</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/dt</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:10fd9e9c-5227-4617-ad0e-65cbcc3eb7a9">
+    <prov:value xsi:type="xsd:int">10000</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:entity prov:ref="id:10fd9e9c-5227-4617-ad0e-65cbcc3eb7a9"/>
+    <prov:time>2024-07-30T14:16:07.068254</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/nsteps</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:c7cc3c24-3190-432a-bc96-bdc8c304fcb6">
+    <prov:value xsi:type="xsd:double">1.0</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:entity prov:ref="id:c7cc3c24-3190-432a-bc96-bdc8c304fcb6"/>
+    <prov:time>2024-07-30T14:16:07.068324</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/ref_p</prov:role>
+  </prov:used>
+  <prov:entity prov:id="id:8b4817d4-1b47-4291-ad9a-1de0e0af2422">
+    <prov:value xsi:type="xsd:double">298.0</prov:value>
+  </prov:entity>
+  <prov:used>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:entity prov:ref="id:8b4817d4-1b47-4291-ad9a-1de0e0af2422"/>
+    <prov:time>2024-07-30T14:16:07.068382</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0/ref_t</prov:role>
+  </prov:used>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:c2e2034a-7838-44e9-9479-adefca3550f1"/>
+    <prov:ender prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:time>2024-07-30T14:16:07.308537</prov:time>
+  </prov:wasEndedBy>
+  <prov:entity prov:id="cwlprov:None">
+    <prov:label>None</prov:label>
+  </prov:entity>
+  <prov:wasGeneratedBy>
+    <prov:entity prov:ref="cwlprov:None"/>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:time>2024-07-30T14:16:07.309782</prov:time>
+    <prov:role xsi:type="xsd:QName">wf:main/primary/config_tag_mdp_workflow__step__1__config_tag_mdp_0@1@0___output_config_string</prov:role>
+  </prov:wasGeneratedBy>
+  <prov:wasEndedBy>
+    <prov:activity prov:ref="id:9a41dad8-a1b5-4a5d-825b-437da47258d6"/>
+    <prov:ender prov:ref="id:49b7c1d9-09c2-4607-b6de-a68051d1aaca"/>
+    <prov:time>2024-07-30T14:16:07.309888</prov:time>
+  </prov:wasEndedBy>
+</prov:document>
