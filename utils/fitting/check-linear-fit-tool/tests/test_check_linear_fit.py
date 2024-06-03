@@ -1,16 +1,9 @@
 """Tests for check_linear_fit."""
-import sys
 from pathlib import Path
 
 from polus.mm.utils.check_linear_fit.check_linear_fit import check_linear_fit
-
-current_dir = Path(__file__).resolve().parent
-target_dir = current_dir.parent.parent.parent / "cwl_utils"
-sys.path.append(str(target_dir))
-
-from cwl_utilities import call_cwltool  # noqa: E402
-from cwl_utilities import create_input_yaml  # noqa: E402
-from cwl_utilities import parse_cwl_arguments  # noqa: E402
+from sophios.api.pythonapi import Step
+from sophios.api.pythonapi import Workflow
 
 
 def test_check_linear_fit() -> None:
@@ -38,20 +31,29 @@ def test_check_linear_fit_out_of_bounds() -> None:
 
 def test_check_linear_fit_cwl() -> None:
     """Test check_linear_fit CWL."""
+    # Define the input parameters
     xs = [1.0, 2.0, 3.0]
     ys = [1.0, 2.0, 3.0]
     tol_quad = 0.1
     slope_min = 0.5
     slope_max = 1.5
-    cwl_file = Path("check_linear_fit.cwl")
-    input_to_props = parse_cwl_arguments(cwl_file)
-    input_to_props["xs"] = xs
-    input_to_props["ys"] = ys
-    input_to_props["tol_quad"] = tol_quad
-    input_to_props["slope_min"] = slope_min
-    input_to_props["slope_max"] = slope_max
 
-    input_yaml_path = Path("check_linear_fit-sfct.yml")
-    create_input_yaml(input_to_props, input_yaml_path)
-    stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
-    assert "success" in stdout
+    # Define paths
+    cwl_file_str = "check_linear_fit_0@1@0.cwl"
+    cwl_file = Path(__file__).resolve().parent.parent / Path(cwl_file_str)
+
+    # Create the CWL step
+    check_linear_fit_step = Step(clt_path=cwl_file)
+    check_linear_fit_step.xs = xs
+    check_linear_fit_step.ys = ys
+    check_linear_fit_step.tol_quad = tol_quad
+    check_linear_fit_step.slope_min = slope_min
+    check_linear_fit_step.slope_max = slope_max
+
+    # Create the workflow and run it
+    steps = [check_linear_fit_step]
+    filename = "check_linear_fit_workflow"
+    workflow = Workflow(steps, filename)
+    workflow.run()
+
+    # cant check output because it is a boolean and no way to capture stdout

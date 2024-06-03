@@ -12,7 +12,7 @@ baseCommand: ["python", "-m", "polus.mm.utils.check_linear_fit"]
 
 requirements:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/check_linear_fit
+    dockerPull: polusai/check-linear-fit-tool@sha256:20c3056601a244cfde2878cfe04ffc210ee7de6062065cbefe2a8fa0a69d4a0e
   InlineJavascriptRequirement: {}
 
 inputs:
