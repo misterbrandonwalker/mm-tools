@@ -7,8 +7,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
-cwl-utils = "0.33"
-cwltool = "3.1.20240404144621"
+sophios = "0.1.1"
 
 [tool.poetry.group.dev.dependencies]
 bump2version = "^1.0.1"
