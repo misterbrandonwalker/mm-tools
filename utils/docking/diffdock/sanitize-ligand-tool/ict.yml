@@ -1,0 +1,36 @@
+specVersion: "0.1.0"
+name: sanitize_ligand
+version: 0.1.0
+container: sanitize-ligand-tool
+entrypoint:
+title: sanitize_ligand
+description: Sanitize input ligand
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
+repository:
+documentation:
+citation:
+
+inputs:
+  - name: input_small_mol_ligand
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3814
+outputs:
+  - name: output_ligand
+    required: true
+    description:
+    type: File
+    format:
+      uri: edam:format_3814
+  - name: valid_ligand
+    required: true
+    description:
+    type: boolean
+ui:
+  - key: inputs.input_small_mol_ligand
+    title: "input_small_mol_ligand: "
+    description: ""
+    type: File
