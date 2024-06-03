@@ -7,5 +7,6 @@ dependencies:
   - pdbfixer==1.9
   - ruamel.yaml==0.17.21
   - pytest==8.1.1
-  - cwltool==3.1.20240404144621
-  - cwl-utils==0.33
+  - pip
+  - pip:
+    - sophios==0.1.1
