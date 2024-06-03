@@ -47,7 +47,7 @@ def test_pdbfixer() -> None:
 
 def test_cwl_pdb_fixer() -> None:
     """Test the pdbfixer function in cwltool."""
-    cwl_file = Path("pdb_fixer.cwl")
+    cwl_file = Path("pdb_fixer_0.1.0.cwl")
     input_to_props = parse_cwl_arguments(cwl_file)
     input_pdb_path = "1msn_protein.pdb"
     input_pdb_path = str(Path(__file__).resolve().parent / Path(input_pdb_path))
@@ -60,7 +60,7 @@ def test_cwl_pdb_fixer() -> None:
     input_to_props["input_helper_pdb_path"]["path"] = input_helper_pdb_path
     input_to_props["input_helper_pdb_path"]["class"] = "File"
     input_to_props["output_pdb_path"] = "output.pdb"
-    input_yaml_path = Path("pdb_fixer.yml")
+    input_yaml_path = Path("pdb_fixer_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
     stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
 

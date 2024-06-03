@@ -1,11 +1,12 @@
 specVersion: 0.1.0
 name: labshare/pdbfixer
 version: 0.1.0
-container: polusai/pdbfixer-plugin:0.1.0
+container: polusai/pdbfixer-tool:0.1.0
 entrypoint: ""
 title: pdbfixer
 description: Fix pdbfiles.
-author: Data Scientist (data.scientist@labshare.org)
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository: https://github.com/labshare/mmtools
 documentation: https://ncats.nih.gov/preclinical/core/informatics
 citation:
