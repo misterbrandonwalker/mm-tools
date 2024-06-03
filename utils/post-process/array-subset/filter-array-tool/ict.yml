@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: filter_array
 version: 0.1.0
-container: filter-array-plugin
+container: filter-array-tool
 entrypoint:
 title: filter_array
 description: Filter array based on input boolean array
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
