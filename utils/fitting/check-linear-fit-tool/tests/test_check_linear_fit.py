@@ -43,7 +43,7 @@ def test_check_linear_fit_cwl() -> None:
     tol_quad = 0.1
     slope_min = 0.5
     slope_max = 1.5
-    cwl_file = Path("check_linear_fit.cwl")
+    cwl_file = Path("check_linear_fit_0.1.0.cwl")
     input_to_props = parse_cwl_arguments(cwl_file)
     input_to_props["xs"] = xs
     input_to_props["ys"] = ys
@@ -51,7 +51,7 @@ def test_check_linear_fit_cwl() -> None:
     input_to_props["slope_min"] = slope_min
     input_to_props["slope_max"] = slope_max
 
-    input_yaml_path = Path("check_linear_fit-sfct.yml")
+    input_yaml_path = Path("check_linear_fit_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
     stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
     assert "success" in stdout

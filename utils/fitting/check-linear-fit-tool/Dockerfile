@@ -1,4 +1,4 @@
-# docker build -f Dockerfile -t mrbrandonwalker/check_linear_fit .
+# docker build -f Dockerfile -t polusai/check-linear-fit-tool .
 FROM condaforge/mambaforge
 
 ENV EXEC_DIR="/opt/executables"

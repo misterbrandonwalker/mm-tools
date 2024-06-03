@@ -5,8 +5,8 @@ container: check-linear-fit-tool
 entrypoint:
 title: check_linear_fit
 description: check_linear_fit
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
