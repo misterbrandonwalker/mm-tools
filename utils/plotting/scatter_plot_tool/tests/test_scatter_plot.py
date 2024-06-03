@@ -21,13 +21,13 @@ def test_scatter_plot() -> None:
 
 def test_duplicate() -> None:
     """Test pdb."""
-    cwl_file_str = "scatter_plot.cwl"
+    cwl_file_str = "scatter_plot_0.1.0.cwl"
     cwl_file = Path(__file__).resolve().parent.parent / Path(cwl_file_str)
     input_to_props = parse_cwl_arguments(cwl_file)
     input_to_props["xs"] = [1, 2, 3]
     input_to_props["ys"] = [1, 2, 3]
     input_to_props["output_png_path"] = "test.png"
-    input_yaml_path = Path("scatter_plot.yml")
+    input_yaml_path = Path("scatter_plot_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
 
     call_cwltool(cwl_file, input_yaml_path)

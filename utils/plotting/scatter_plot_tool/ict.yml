@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: scatter_plot
 version: 0.1.0
-container: scatter-plot-plugin
+container: scatter-plot-tool
 entrypoint:
 title: scatter_plot
 description: Generate a scatter plot
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
