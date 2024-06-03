@@ -13,7 +13,7 @@ baseCommand: ["python", "-m", "polus.mm.utils.random_subset_rows"]
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/random_subset_rows_tool
+    dockerPull: polusai/random-subset-rows-tool@sha256:f2d1474265c738db5ba70849fc0daa37e83f9a7a1648f1d3f025dd7718261e69
 
 requirements:
   InlineJavascriptRequirement: {}
