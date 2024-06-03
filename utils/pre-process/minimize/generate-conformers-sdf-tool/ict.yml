@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: generate_conformers_sdf
 version: 0.1.0
-container: generate-conformers-sdf-plugin
+container: generate-conformers-sdf-tool
 entrypoint:
 title: generate_conformers_sdf
 description: Uses openbabel to add hydrogens and minimize a small molecule, search for the lowest energy conformer, then minimize again.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
