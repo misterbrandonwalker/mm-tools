@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: rename_residues_mol
 version: 0.1.0
-container: rename-residues-mol-plugin
+container: rename-residues-mol-tool
 entrypoint:
 title: rename_residues_mol
 description: Run a python3 script
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:

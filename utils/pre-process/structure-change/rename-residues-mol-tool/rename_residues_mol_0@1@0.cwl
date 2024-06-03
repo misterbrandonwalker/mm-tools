@@ -12,7 +12,7 @@ baseCommand: ["python", "-m", "polus.mm.utils.rename_residues_mol"]
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/rename_residues_mol_tool
+    dockerPull: polusai/rename-residues-mol-tool@sha256:7a2662858f2608b3e1cff6170c65dd9f5c635d2cb5e2735b3f075015a7847f58
 
 inputs:
 
