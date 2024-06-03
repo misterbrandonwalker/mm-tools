@@ -12,7 +12,7 @@ baseCommand: ["python", "-m", "polus.mm.utils.scatter_plot"]
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/scatter_plot
+    dockerPull: polusai/scatter-plot-tool@sha256:00a025a1bc943207d8c938af07deb763f6ae1a3a67e94316ea64302427f1de8f
 
 inputs:
 
@@ -20,25 +20,31 @@ inputs:
     type:
       type: array
       items: float
-      inputBinding:
-        position: 2
-        prefix: --xs
+    inputBinding:
+      position: 2
+      prefix: --xs
+    doc: |-
+      X-axis array of data
 
   ys:
     type:
       type: array
       items: float
-      inputBinding:
-        position: 3
-        prefix: --ys
+    inputBinding:
+      position: 3
+      prefix: --ys
+    doc: |-
+      Y-axis array of data
 
   ys2:
     type:
       type: array
       items: float
-      inputBinding:
-        position: 4
-        prefix: --ys2
+    inputBinding:
+      position: 4
+      prefix: --ys2
+    doc: |-
+      Alternative Y-axis array of data
 
   output_png_path:
     label: Path to the output png file

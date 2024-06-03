@@ -9,8 +9,7 @@ packages = [{include = "polus", from = "src"}]
 [tool.poetry.dependencies]
 python = ">=3.9,<3.12"
 typer = "^0.7.0"
-cwl-utils = "0.33"
-cwltool = "3.1.20240404144621"
+sophios = "0.1.1"
 matplotlib = "3.8.4"
 
 [tool.poetry.group.dev.dependencies]
