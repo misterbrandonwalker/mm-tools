@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: zip_top
 version: 0.1.0
-container: zip-top-plugin
+container: zip-top-tool
 entrypoint:
 title: zip_top
 description: zips a gromacs topology TOP file (and/or itp include file).
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
