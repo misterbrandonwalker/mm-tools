@@ -12,7 +12,7 @@ baseCommand: ["conda", "run", "-n", "project_env", "python", "-m", "polus.mm.uti
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/pose_cluster_filter_tool
+    dockerPull: polusai/pose-cluster-filter-tool@sha256:f994fc02360bb22515b324600628b286f9daa7ddf91876fa1e44bc11728f6e9a
 
 requirements:
   InlineJavascriptRequirement: {}

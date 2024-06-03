@@ -35,7 +35,7 @@ def test_pose_cluster_filter() -> None:
 
 def test_pose_cluster_filter_cwl() -> None:
     """Test the pose_cluster_filter CWL."""
-    cwl_file = Path("pose_cluster_filter.cwl")
+    cwl_file = Path("pose_cluster_filter_0.1.0.cwl")
     input_to_props = parse_cwl_arguments(cwl_file)
     predicted_poses = [
         "rank2_confidence0.35.sdf",
@@ -50,7 +50,7 @@ def test_pose_cluster_filter_cwl() -> None:
         file_dict_current["path"] = path_pose
         input_to_props["predicted_poses"].append(file_dict_current)
 
-    input_yaml_path = Path("pose_cluster_filter.yml")
+    input_yaml_path = Path("pose_cluster_filter_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
     stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
     assert "success" in stderr

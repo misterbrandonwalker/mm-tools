@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: pose_cluster_filter
 version: 0.1.0
-container: pose-cluster-filter-plugin
+container: pose-cluster-filter-tool
 entrypoint:
 title: pose_cluster_filter
 description: Cluster poses in protein and take max confident pose for each cluster
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:

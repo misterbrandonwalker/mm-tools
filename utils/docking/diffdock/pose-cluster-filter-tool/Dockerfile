@@ -1,5 +1,5 @@
 
-# docker build -f Dockerfile -t mrbrandonwalker/pose_cluster_filter_tool .
+# docker build -f Dockerfile -t polusai/pose-cluster-filter-tool .
 FROM condaforge/mambaforge
 
 ENV EXEC_DIR="/opt/executables"
