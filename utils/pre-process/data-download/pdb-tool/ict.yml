@@ -2,13 +2,13 @@ specVersion: 0.1.0
 entrypoint: pdb
 name: 'labshare/download-pdb-file'
 version: 0.1.0
-container: polusai/pdb-plugin:0.1.0
+container: polusai/pdb-tool:0.1.0
 title: Download PDB file
 description: Download PDB file
-author: [Nazanin Donyapour]
+author: Brandon Walker, Nazanin Donyapour
 repository: https://github.com/labshare/mmtools
 documentation: https://ncats.nih.gov/preclinical/core/informatics
-contact: "Nazanin.Donyapour@axleinfo.com"
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 inputs:
 - name: filter
   required: true
