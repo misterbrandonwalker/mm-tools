@@ -24,14 +24,14 @@ def test_rename_residues_mol() -> None:
 
 def test_rename_residues_mol_cwl() -> None:
     """Test rename_residues_mol CWL."""
-    cwl_file_str = "rename_residues_mol.cwl"
+    cwl_file_str = "rename_residues_mol_0.1.0.cwl"
     cwl_file = Path(__file__).resolve().parent.parent / Path(cwl_file_str)
     input_to_props = parse_cwl_arguments(cwl_file)
     file_path_str = "5umx_ligand.mol2"
     file_path = str(Path(__file__).resolve().parent / Path(file_path_str))
     input_to_props["input_mol2_path"]["path"] = file_path
 
-    input_yaml_path = Path("rename_residues_mol.yml")
+    input_yaml_path = Path("rename_residues_mol_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
 
     stdout, stderr = call_cwltool(cwl_file, input_yaml_path)
