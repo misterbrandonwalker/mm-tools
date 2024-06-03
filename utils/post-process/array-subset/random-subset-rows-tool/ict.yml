@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: random_subset_rows
 version: 0.1.0
-container: random-subset-rows-plugin
+container: random-subset-rows-tool
 entrypoint:
 title: random_subset_rows
 description: return subset indices for array with sample selection using a random seed
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:

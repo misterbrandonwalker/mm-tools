@@ -26,7 +26,7 @@ def test_random_subset_rows() -> None:
 
 def test_random_subset_rows_cwl() -> None:
     """Test random_subset_rows_cwl."""
-    cwl_file = Path("random_subset_rows.cwl")
+    cwl_file = Path("random_subset_rows_0.1.0.cwl")
     input_to_props = parse_cwl_arguments(cwl_file)
     input_file = "rows.txt"
     input_to_props["input_file"]["path"] = str(
@@ -35,7 +35,7 @@ def test_random_subset_rows_cwl() -> None:
     input_to_props["num_of_samples"] = 2
     input_to_props["random_seed"] = 0
     input_to_props["output_file"] = "cwl_output.txt"
-    input_yaml_path = Path("random_subset_rows.yml")
+    input_yaml_path = Path("random_subset_rows_0.1.0.yml")
     create_input_yaml(input_to_props, input_yaml_path)
     call_cwltool(cwl_file, input_yaml_path)
     assert Path("cwl_output.txt").exists()

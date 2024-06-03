@@ -1,4 +1,4 @@
-# docker build -f Dockerfile -t mrbrandonwalker/random_subset_rows .
+# docker build -f Dockerfile -t polusai/random-subset-rows-tool .
 FROM condaforge/mambaforge
 
 ENV EXEC_DIR="/opt/executables"
