@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: extract_model_pdbqt
 version: 0.1.0
-container: extract-model-pdbqt-plugin
+container: extract-model-pdbqt-tool
 entrypoint:
 title: extract_model_pdbqt
 description: Extracts a model from a PDBQT file with several models.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
