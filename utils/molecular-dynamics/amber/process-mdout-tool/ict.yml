@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: process_mdout
 version: 0.1.0
-container: process-mdout-plugin
+container: process-mdout-tool
 entrypoint:
 title: process_mdout
 description: Wrapper of the AmberTools (AMBER MD Package) process_mdout tool module.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
