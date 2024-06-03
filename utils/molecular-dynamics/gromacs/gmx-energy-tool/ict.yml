@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: gmx_energy
 version: 0.1.0
-container: gmx-energy-plugin
+container: gmx-energy-tool
 entrypoint:
 title: gmx_energy
 description: Wrapper of the GROMACS energy module for extracting energy components from a given GROMACS energy file.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
