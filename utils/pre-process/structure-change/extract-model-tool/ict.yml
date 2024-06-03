@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: extract_model
 version: 0.1.0
-container: extract-model-plugin
+container: extract-model-tool
 entrypoint:
 title: extract_model
 description: This class is a wrapper of the Structure Checking tool to extract a model from a 3D structure.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
