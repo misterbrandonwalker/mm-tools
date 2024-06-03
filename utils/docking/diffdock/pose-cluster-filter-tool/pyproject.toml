@@ -7,7 +7,10 @@ readme = "README.md"
 packages = [{include = "polus", from = "src"}]
 
 [tool.poetry.dependencies]
+python = ">=3.9,<3.12"
 typer = "^0.7.0"
+sophios = "0.1.1"
+rdkit = "2024.3.3"
 
 [tool.poetry.group.dev.dependencies]
 bump2version = "^1.0.1"

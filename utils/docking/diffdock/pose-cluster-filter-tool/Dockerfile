@@ -1,5 +1,5 @@
 
-# docker build -f Dockerfile -t mrbrandonwalker/pose_cluster_filter_tool .
+# docker build -f Dockerfile -t polusai/pose-cluster-filter-tool .
 FROM condaforge/mambaforge
 
 ENV EXEC_DIR="/opt/executables"
@@ -16,16 +16,11 @@ COPY README.md ${EXEC_DIR}
 COPY CHANGELOG.md ${EXEC_DIR}
 
 # Install needed packages here
-# errors installing rdkit from poetry so using conda
-COPY environment.yml ${EXEC_DIR}
-RUN mamba env create -f ${EXEC_DIR}/environment.yml
-RUN echo "source activate project_env" > ~/.bashrc
-ENV PATH /opt/conda/envs/env/bin:$PATH
 
 COPY src ${EXEC_DIR}/src
 
 ADD Dockerfile .
 
-RUN conda run -n project_env pip install ${EXEC_DIR} --no-cache-dir
+RUN pip3 install ${EXEC_DIR} --no-cache-dir
 
 CMD ["--help"]

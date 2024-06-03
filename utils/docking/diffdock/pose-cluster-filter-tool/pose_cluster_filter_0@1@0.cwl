@@ -8,11 +8,11 @@ label: Cluster poses in protein and take max confident pose for each cluster
 doc: |-
   Cluster poses in protein and take max confident pose for each cluster
 
-baseCommand: ["conda", "run", "-n", "project_env", "python", "-m", "polus.mm.utils.pose_cluster_filter"]
+baseCommand: ["python", "-m", "polus.mm.utils.pose_cluster_filter"]
 
 hints:
   DockerRequirement:
-    dockerPull: mrbrandonwalker/pose_cluster_filter_tool
+    dockerPull: polusai/pose-cluster-filter-tool@sha256:f30068018bf5e04f6c19ea9fe44349066732720d0307d0a569dabb98d199312e
 
 requirements:
   InlineJavascriptRequirement: {}
@@ -30,8 +30,8 @@ inputs:
     type:
       type: array
       items: File
-      inputBinding:
-        prefix: --predicted_poses
+    inputBinding:
+      prefix: --predicted_poses
     format: edam:format_3814
 
 outputs:

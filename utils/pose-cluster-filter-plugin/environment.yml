@@ -1,9 +1,0 @@
-name: project_env
-channels:
-  - conda-forge
-dependencies:
-  - python==3.10
-  - rdkit==2024.03.1
-  - pytest==8.1.1
-  - cwltool==3.1.20240404144621
-  - cwl-utils==0.33
