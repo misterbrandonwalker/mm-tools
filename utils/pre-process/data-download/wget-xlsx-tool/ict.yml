@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: wget_xlsx
 version: 0.1.0
-container: wget-xlsx-plugin
+container: wget-xlsx-tool
 entrypoint:
 title: wget_xlsx
 description: Download an xlsx file
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
