@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: config_tag_mdp
 version: 0.1.0
-container: config-tag-mdp-plugin
+container: config-tag-mdp-tool
 entrypoint:
 title: config_tag_mdp
 description: Returns a dictionary of the given arguments as a JSON-encoded string.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
