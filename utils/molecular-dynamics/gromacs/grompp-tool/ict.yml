@@ -1,12 +1,12 @@
 specVersion: "0.1.0"
 name: grompp
 version: 0.1.0
-container: grompp-plugin
+container: grompp-tool
 entrypoint:
 title: grompp
 description: Wrapper of the GROMACS grompp module.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
