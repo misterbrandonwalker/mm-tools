@@ -5,8 +5,8 @@ container: fix-side-chain-tool
 entrypoint:
 title: fix_side_chain
 description: Class to model the missing atoms in amino acid side chains of a PDB.
-author: Data Scientist
-contact: data.scientist@labshare.org
+author: Brandon Walker, Nazanin Donyapour
+contact: brandon.walker@axleinfo.com, nazanin.donyapour@axleinfo.com
 repository:
 documentation:
 citation:
