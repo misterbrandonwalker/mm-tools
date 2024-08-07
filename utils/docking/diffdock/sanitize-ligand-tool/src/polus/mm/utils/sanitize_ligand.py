@@ -162,19 +162,15 @@ def attempt_fix_ligand(
     return valid_lig, molecule
 
 
-def sanitize_ligand(
-    input_small_mol_ligand: Path,
-    outdir: Path,
-) -> None:
+def sanitize_the_ligand(input_small_mol_ligand: Path) -> None:
     """Sanitize ligand file.
 
     Args:
         input_small_mol_ligand: Ligand file
-        outdir: Output directory
     """
-    output_small_mol_ligand = outdir / Path(input_small_mol_ligand.name)
+    output_small_mol_ligand = Path(input_small_mol_ligand)
     mol: Chem.SDMolSupplier = Chem.SDMolSupplier(
-        input_small_mol_ligand.resolve(),
+        input_small_mol_ligand,
         sanitize=False,
         removeHs=False,
     )[0]
@@ -189,5 +185,6 @@ def sanitize_ligand(
         with Chem.SDWriter(output_small_mol_ligand) as w:
             w.write(rdkit_mol)
 
+    outdir = Path.cwd()
     with outdir.joinpath("valid.txt").open("w", encoding="utf-8") as f:
         f.write(str(valid_ligand))

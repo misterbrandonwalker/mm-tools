@@ -5,7 +5,7 @@ import logging
 from os import environ
 
 import typer
-from polus.mm.utils.sanitize_ligand import sanitize_ligand
+from polus.mm.utils.sanitize_ligand import sanitize_the_ligand
 
 logging.basicConfig(
     format="%(asctime)s - %(name)-8s - %(levelname)-8s - %(message)s",
@@ -28,7 +28,7 @@ def main(
 ) -> None:
     """Sanitize Ligand."""
     logger.info(f"input_small_mol_ligand: {input_small_mol_ligand}")
-    sanitize_ligand(input_small_mol_ligand)
+    sanitize_the_ligand(input_small_mol_ligand)
 
 
 if __name__ == "__main__":

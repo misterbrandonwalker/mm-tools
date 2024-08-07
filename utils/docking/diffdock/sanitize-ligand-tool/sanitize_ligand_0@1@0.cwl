@@ -8,17 +8,19 @@ label: Sanitize input ligand
 doc: |-
   Sanitize input ligand
 
-baseCommand: ["python", "-m", "polus.mm.utils.sanitize_ligand"]
+baseCommand: ["python", "-m", "polus.mm.utils"]
 
 hints:
   DockerRequirement:
-    dockerPull:  polusai/sanitize-ligand-tool@sha256:926e501300fa5b940c250347cf346cdcacf21944469ed82c3788a58e0957c18d
+    dockerPull:  polusai/sanitize-ligand-tool@sha256:466aa360974042a9ea8dda8884111101cb0781a16ab7e8f9dd9a6046fe561316
 
 requirements:
   InlineJavascriptRequirement: {}
   InitialWorkDirRequirement: # conditionally overwrite the input ligand, otherwise cwltool will symlink to the original
     listing:
-      - $(inputs.input_small_mol_ligand)
+      - entry: $(inputs.input_small_mol_ligand)
+        writable: true
+
 
 inputs:
 
